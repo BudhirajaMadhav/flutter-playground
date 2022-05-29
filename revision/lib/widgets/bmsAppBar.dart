@@ -63,24 +63,33 @@ getBMSAppBar() {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Row(
-                children: [
-                  Image.network("https://i.imgur.com/W7l3FUo_d.webp"),
-                  SizedBox(width: 10),
-                  Text("All Languages"),
-                ],
+              Expanded(
+                flex: 1,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.network("https://i.imgur.com/W7l3FUo_d.webp"),
+                    Text("All Languages"),
+                  ],
+                ),
               ),
               VerticalDivider(
-                color: Colors.grey.shade300,
+                color: Colors.black,
                 endIndent: 13,
                 indent: 13,
               ),
-              Row(
-                children: [
-                  Image.network("https://i.imgur.com/eUJDnqE.png"),
-                  SizedBox(width: 10),
-                  Text("Cinemas"),
-                ],
+              Expanded(
+                flex: 1,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.network("https://i.imgur.com/eUJDnqE.png"),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Text("Cinemas"),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
